@@ -1,8 +1,8 @@
 books = []
 
-name = input("Hi! What is your name")
+name = input("Hi! What is your name? ")
 
-print(f"Hi! {name} Welcome to your Reading Tracker!")
+print(f"Hello! {name} Welcome to your Reading Tracker!")
 
 while True:
 
@@ -14,12 +14,12 @@ while True:
  print("2. View your books")
  print("3. Exit")
 
- option = input("What would you like to do? : ")
+ option = input("What would you like to do?: ")
 
  if option == "1":
   title = input("What is the title of the book?: ")
-  author = input("Who wrote the it?: ")
-  date_finished = input("When did you finish reading it?: ")
+  author = input("Who wrote it?: ")
+  date_finished = input("When did you finish reading it? (Day, Month, Year): ")
   rating = input("What do you rate this book out of five?: ")
   book = {"Title": title,
             "Author": author,
