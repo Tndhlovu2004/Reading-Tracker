@@ -92,9 +92,9 @@ while True:
     else:
      break
   book = {"Title": title,
-            "Author": author,
-            "Date_finished": date_finished,
-            "Rating": rating}
+          "Author": author,
+          "Date_finished": date_finished,
+          "Rating": rating}
   books.append(book)
   print()
   print("You have successfully added: ")
@@ -133,4 +133,5 @@ while True:
   break
  else:
     print("Your option is invalid.")
+    input("Press enter to return to the main menu.")
 
