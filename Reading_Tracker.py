@@ -1,7 +1,14 @@
 # Project: Reading Tracker
 # Author: Natasha Sophia Ndhlovu
 
-books = []
+import json
+
+try:
+ with open("books.json", "r") as file:
+  books = json.load(file)
+except FileNotFoundError:
+ books = []
+
 months = ["January",
 "February",
 "March",
@@ -15,8 +22,24 @@ months = ["January",
 "November",
 "December"]
 
-name = input("Hi! What is your name?: ")
-year = input("What is your current reading year?: ")
+try:
+ with open("name.json", "r") as file:
+  name = json.load(file)
+except FileNotFoundError:
+ name = input("Hi! What is your name?: ")
+
+with open("name.json", "w") as file:
+ json.dump(name, file)
+
+try:
+ with open("year.json", "r") as file:
+  year = json.load(file)
+except FileNotFoundError:
+ year = input("What is your current reading year?: ")
+
+with open("year.json", "w") as file:
+ json.dump(year, file)
+
 print()
 
 print(f"Hello {name}! Welcome to your Reading Tracker!")
@@ -57,7 +80,7 @@ while True:
      print("Month is invalid. Please try again.")
     else:
      break
-  date_finished = (f"{day}, {month}, {year}.") 
+  date_finished = (f"{day} {month}, {year}.") 
   while True:
     try:
      rating = int(input("What would you rate this book out of five?: "))
@@ -81,11 +104,15 @@ while True:
   print(f"Rating: {book['Rating']}")
   print()
 
+  with open("books.json", "w") as file:
+   json.dump(books, file)
+
   input("Press enter to return to the main menu")
          
  elif option == "2":
   if len(books) == 0:
    print("You have not added any books yet.")
+   input("Press enter to return to the main menu.")
   else: 
    print(f"In {year}, you have read the following books: ")
    print()
