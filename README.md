@@ -2,7 +2,7 @@
 
 # About
 
-This is a project designed to track the number of books a person has read over the course of a year. The user is able to enter any number of book titles/information, and the program records this data, allowing the user to exit and return to a list that was previously created. 
+This is a project designed to track the books a person has read over the course of a given year. The user is able to enter any number of book titles/information, and the program records this data, allowing the user to exit and return to a list that was previously created. 
 
 I mainly created this program becasue I really love reading, so I wanted to make something that corresponded with that interest. As my first personal project I wanted to make something that not only aligned with my interests, but was also something that I would genuinely use. 
 I also wanted this to be a program in which I would be able to practice diffferent python concepts, allowing me to continue to work on my programming skills.
